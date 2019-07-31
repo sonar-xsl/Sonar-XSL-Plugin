@@ -75,3 +75,13 @@ Well, there is some TODOs to fix :
   * The schematron may have itself some dependencies that needs to be resolved, so there is a little bit of work
 * Integration with the XSPEC Maven plugin
   * To bring code coverage into SonarQube
+  
+## Repositories :
+
+* [sonar-xsl](https://github.com/sonar-xsl/) (This organization)
+* [sonar-xsl/Sonar-Schematron-Reactor](https://github.com/sonar-xsl/Sonar-Schematron-Reactor)
+* [sonar-xsl/sonar-xsl-packaging-api](https://github.com/sonar-xsl/sonar-xsl-packaging-api)
+* [sonar-xsl/sonar-schematron-packaging-plugin](https://github.com/sonar-xsl/sonar-schematron-packaging-plugin)
+* [mricaud/xslt-quality: XML utilities](https://github.com/mricaud/xslt-quality)
+* [jimetevenard/xslt-quality: XML utilities](https://github.com/jimetevenard/xslt-quality) - (temp fork)
+
