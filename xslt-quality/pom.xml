@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>labo.jim</groupId>
+	<artifactId>xslt-quality</artifactId>
+	
+	<parent>
+		<groupId>org.sonarxsl</groupId>
+		<artifactId>sonar-xsl-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../</relativePath>
+	</parent>
+
+	<packaging>jar</packaging>
+
+	<name>XSLT Quality Schematron</name>
+	<description>Code quality for XSLT</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonarxsl</groupId>
+				<artifactId>sonar-schematron-packagin-plugin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>package-schematron-for-sonar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schematronResourcesSets>
+						<schematronResourcesSet>
+							<dir>src/main/sch/</dir>
+							<includes>
+								<include>**/*.sch</include>
+							</includes>
+							<entryPoints>
+								<entryPoint>checkXSLTstyle.sch</entryPoint>
+							</entryPoints>
+						</schematronResourcesSet>
+					</schematronResourcesSets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

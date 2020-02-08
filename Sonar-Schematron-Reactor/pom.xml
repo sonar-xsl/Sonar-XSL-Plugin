@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.sonarxsl</groupId>
+	<artifactId>sonar-schematron-reactor</artifactId>
+
+	<parent>
+		<groupId>org.sonarxsl</groupId>
+		<artifactId>sonar-xsl-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../</relativePath>
+	</parent>
+
+	<packaging>jar</packaging>
+
+	<name>Sonar Schematron Reactor</name>
+	<description>Schematron reactor for the Sonar XSL Plugin</description>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.apiVersion>6.7.1</sonar.apiVersion>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.sonarsource.sonarqube</groupId>
+			<artifactId>sonar-plugin-api</artifactId>
+			<!-- minimal version of SonarQube to support. Note that the groupId was 
+				"org.codehaus.sonar" before version 5.2 -->
+			<version>${sonar.apiVersion}</version>
+			<!-- mandatory scope -->
+			<scope>provided</scope>
+		</dependency>
+		
+		
+		
+		
+		<dependency>
+			<groupId>org.sonarxsl</groupId>
+			<artifactId>sonar-xsl-packaging-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>9.9.0-1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.xmlresolver</groupId>
+			<artifactId>xmlresolver</artifactId>
+			<version>0.13.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-slf4j-impl</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- for XML highlighting -->
+		<dependency>
+			<groupId>org.sonarsource.xml</groupId>
+			<artifactId>sonar-xml-plugin</artifactId>
+			<version>1.5.1.1452</version>
+		</dependency>
+
+
+	</dependencies>
+
+	
+
+</project>

@@ -1,18 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.sonarxsl</groupId>
-  <artifactId>sonar-xsl-parent</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <artifactId>sonar-xsl-packaging-api</artifactId>
 
-  <modules>
-    <!-- TODO : Harmonize upper/lower case-->
-    <module>sonar-xsl-packaging-api</module>
-    <module>sonar-schematron-packaging-plugin</module>
-    <module>Sonar-Schematron-Reactor</module>
-    <module>xslt-quality</module>
-    <module>Sonar-XSL-Plugin</module>
-  </modules>
+	<parent>
+		<groupId>org.sonarxsl</groupId>
+		<artifactId>sonar-xsl-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../</relativePath>
+	</parent>
   
   <properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
