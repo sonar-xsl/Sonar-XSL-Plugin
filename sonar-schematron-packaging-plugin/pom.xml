@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>org.sonarxsl</groupId>
 			<artifactId>sonar-xsl-packaging-api</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
 
