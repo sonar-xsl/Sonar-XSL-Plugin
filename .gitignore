@@ -1,4 +1,30 @@
+# Eclipse / vscode
 **/.settings/
-**/target/
 **/.classpath
 **/.project
+**/.factorypath
+**/.vscode
+
+
+# Maven
+**/target/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+**/dependency-reduced-pom.xml
+**/buildNumber.properties
+**/.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+**/.mvn/wrapper/maven-wrapper.jar
+
+
+# OS Files
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+**/Thumbs.db
+**/Thumbs.db:encryptable
+**/ehthumbs.db
+**/ehthumbs_vista.db
