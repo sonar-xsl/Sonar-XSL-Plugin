@@ -3,6 +3,8 @@
   <groupId>org.sonarxsl</groupId>
   <artifactId>sonar-xsl-packaging-api</artifactId>
 
+  <name>Sonar-XSL Packaging API</name>
+
 	<parent>
 		<groupId>org.sonarxsl</groupId>
 		<artifactId>sonar-xsl-parent</artifactId>
