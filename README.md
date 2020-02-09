@@ -49,7 +49,7 @@ Cf. <https://github.com/sonar-xsl/Sonar-Schematron-Reactor>
 
 Out of the box, the unique [xslt-quality](https://github.com/mricaud/xslt-quality)
 
-Packaged for this plugin, via the dedicated [Maven Plugin](https://github.com/sonar-xsl/sonar-schematron-packaging-plugin).
+Packaged for this plugin, via the dedicated Maven Plugin. (See module ./sonar-schematron-packaging-plugin)
 
 This mechanism can be used to extend this plugin :
 
@@ -62,7 +62,7 @@ This mechanism can be used to extend this plugin :
 Well, there is some TODOs to fix :
 
 * Realese and pushish the plugin to Maven Central !  
-  As for now, if you wana try it, you have to build it locally from the sources (And it's specific dependencies as well)
+  As for now, if you wana try it, you have to build it locally from the sources.
 * The execution is quite slow...
   * NB : The actual implementation is based on the [Skeleton XSLT implementation](https://github.com/Schematron/schematron) of ISO-Schematron.
 * Integration with SonarQube
@@ -75,13 +75,4 @@ Well, there is some TODOs to fix :
   * The schematron may have itself some dependencies that needs to be resolved, so there is a little bit of work
 * Integration with the XSPEC Maven plugin
   * To bring code coverage into SonarQube
-  
-## Repositories :
-
-* [sonar-xsl](https://github.com/sonar-xsl/) (This organization)
-* [sonar-xsl/Sonar-Schematron-Reactor](https://github.com/sonar-xsl/Sonar-Schematron-Reactor)
-* [sonar-xsl/sonar-xsl-packaging-api](https://github.com/sonar-xsl/sonar-xsl-packaging-api)
-* [sonar-xsl/sonar-schematron-packaging-plugin](https://github.com/sonar-xsl/sonar-schematron-packaging-plugin)
-* [mricaud/xslt-quality: XML utilities](https://github.com/mricaud/xslt-quality)
-* [jimetevenard/xslt-quality: XML utilities](https://github.com/jimetevenard/xslt-quality) - (temp fork)
 

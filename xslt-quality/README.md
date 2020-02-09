@@ -1,5 +1,13 @@
 # XSLT Quality
 
+***This module is a fork of <https://github.com/mricaud/xslt-quality>***
+
+*It mainly consists in a quality-related schematron control to be applied to XSL stylesheets.*
+
+*Some additional metadata (Rules descriptions, severity, etc.) has been added to fit the Sonarqube Issue model.*
+
+-------
+
 This repo is about testing your XSLT quality.
 It contains a main schematron to be applied to your XSLT:
 
