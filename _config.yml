@@ -1,1 +1,3 @@
+# Config file for Github Pages (www.sonarxsl.org)
 theme: jekyll-theme-minimal
+logo: /docs/sonar-xsl.png
