@@ -28,7 +28,7 @@ You should maybe consider using `xsl:apply-templates` instead
 
 Since this plugin is open source, one can embed any additional Schematron script to support custom rules.
 
-## Architecture / Extending
+## Build and install
 
 The Sonar-XSL-Plugin is built *via* Maven.
 
@@ -36,6 +36,8 @@ Running `mvn package` will invoke  the [sonar-packaging-maven-plugin](https://gi
 
 The process of installing a SonarQube plugin is documented here :  
 <https://docs.sonarqube.org/latest/setup/install-plugin/>, see § *Manual Installation*
+
+## Architecture / Extending
 
 It embeds two main modules
 
