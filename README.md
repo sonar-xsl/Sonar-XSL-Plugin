@@ -7,6 +7,8 @@ it brings the benefits of SonarQube to XSL projects :
 * Continuous Quality measurement
 * Interactive documentation of best-practices
 
+**Contact** : Sonar-XSL-Plugin is mainly maintained by [Jim Etevenard](https://github.com/jimetevenard)
+
 ## How it works
 
 **This plugin runs an XSL-related Best-practice Schematron on each XSLT file of your project.**
