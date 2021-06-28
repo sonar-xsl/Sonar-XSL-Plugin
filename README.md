@@ -7,7 +7,12 @@ it brings the benefits of SonarQube to XSL projects :
 * Continuous Quality measurement
 * Interactive documentation of best-practices
 
+## Contact / Updates roadmap
+
 **Contact** : Sonar-XSL-Plugin is mainly maintained by [Jim Etevenard](https://github.com/jimetevenard)
+
+**Development roadmap and upcoming updates** :  
+See [main milestones](https://github.com/sonar-xsl/Sonar-XSL-Plugin/milestones) and [active issues](https://github.com/sonar-xsl/Sonar-XSL-Plugin/issues) on *Github*
 
 ## How it works
 
