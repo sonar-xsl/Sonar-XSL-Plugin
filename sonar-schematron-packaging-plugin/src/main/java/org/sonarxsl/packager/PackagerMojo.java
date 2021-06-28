@@ -51,8 +51,7 @@ public class PackagerMojo extends AbstractMojo {
 
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException {
-		
-		getLog().info("Heeeelllooooooooooooooo !");
+
 		// Include files into the jar
 		// ==========================
 		destinationDir = new File(outputDir, DESTINATION_PATH);
