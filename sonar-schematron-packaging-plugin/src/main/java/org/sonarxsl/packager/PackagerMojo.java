@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -103,7 +104,7 @@ public class PackagerMojo extends AbstractMojo {
 		try {
 			File dest = new File(destinationDir, file);
 			dest.getParentFile().mkdirs();
-			Files.copy(source.toPath(), dest.toPath());
+			Files.copy(source.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
 			throw new MojoExecutionException("error copying file " + file, e);
 		}

@@ -23,7 +23,7 @@ public class SonarXSLTPlugin implements Plugin {
 	public SchematronLanguageDeclaration xslLanguageDeclaration() throws SchematronProcessingException {
 		return new SchematronLanguageDeclaration()
 				
-				.name("Xslt")
+				.name("XSLT")
 				.key("xslt")
 				.addFileSuffix(".xsl")
 		
