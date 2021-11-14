@@ -1,8 +1,8 @@
 package org.sonarxsl.plugin.test;
 
 import org.junit.Test;
+import org.sonalxsl.plugin.SonarXSLTPlugin;
 import org.sonarxsl.helpers.SaxonHolder;
-import org.sonarxsl.sonarPlugin.SonarXSLTPlugin;
 
 public class TestLanguageDeclaration {
 	
