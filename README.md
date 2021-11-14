@@ -34,16 +34,27 @@ You should maybe consider using `xsl:apply-templates` instead
 
 Since this plugin is open source, one can embed any additional Schematron script to support custom rules.
 
-## Build and install
+## Download and install
+
+Public releases are available on Github :  
+<https://github.com/sonar-xsl/Sonar-XSL-Plugin/releases>
+
+1. Download `sonar-xsl-plugin-x.x.x.jar` from the link above
+2. Copy it to `$SONARQUBE_HOME/extensions/plugins`
+3. Restart your SonarQube instance and *voilà*.
+
+In most cases, on Linux, `$SONARQUBE_HOME` refers to `/opt/sonarqube/` making the full path to be `/opt/sonarqube/extensions/plugins/`
+
+The process of installing a SonarQube plugin is documented here :  
+<https://docs.sonarqube.org/latest/setup/install-plugin/>, see § *Manual Installation*
+
+## Build from sources
 
 The Sonar-XSL-Plugin is built *via* Maven.
 
 Running `mvn package` will invoke  the [sonar-packaging-maven-plugin](https://github.com/SonarSource/sonar-packaging-maven-plugin) to build a SonarQube-Ready JAR file.
 
 **The JAR to be installed in SonarQube will be delivered at `/sonar-xsl-plugin/target/sonar-xsl-plugin-1.x.x.jar`**
-
-The process of installing a SonarQube plugin is documented here :  
-<https://docs.sonarqube.org/latest/setup/install-plugin/>, see § *Manual Installation*
 
 ## Architecture / Extending
 
