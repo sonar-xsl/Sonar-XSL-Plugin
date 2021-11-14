@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.sonarxsl</groupId>
 		<artifactId>sonar-xsl-parent</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>1.0.0-RC1</version>
 		<relativePath>../</relativePath>
 	</parent>
 
@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>org.sonarxsl</groupId>
 			<artifactId>sonar-xsl-packaging-api</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.0.0-RC1</version>
 		</dependency>
 
 
