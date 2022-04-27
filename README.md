@@ -58,6 +58,8 @@ Running `mvn package` will invoke  the [sonar-packaging-maven-plugin](https://gi
 
 ## Architecture / Extending
 
+![Sonar XSL plugin architecture](docs/architecture.png)
+
 It embeds two main modules
 
 #### Sonar-Schematron-Reactor
