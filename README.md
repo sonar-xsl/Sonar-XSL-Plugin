@@ -48,6 +48,20 @@ In most cases, on Linux, `$SONARQUBE_HOME` refers to `/opt/sonarqube/` making th
 The process of installing a SonarQube plugin is documented here :  
 <https://docs.sonarqube.org/latest/setup/install-plugin/>, see § *Manual Installation*
 
+### Extra configuration
+
+Once the plugin installed, you may encounter the following error when performing an analysis on XSLT source files :
+
+```
+ERROR: Language of file 'your-xslt-file.xsl' can not be decided
+as the file matches patterns of both sonar.lang.patterns.xslt : /.xsl
+and sonar.lang.patterns.xml : /.xml,/.xsd,/.xsl
+```
+
+The error above means that there is a conflict in the SonarQube instance, between this Sonar XSL plugin and the native XML plugin of SonarQube, since booth declares analysing files ending with `.xsl`
+
+**To fix this**, you have to go to the _admin settings_ of SonarQube, to exclude the `.xsl` file suffix from the scope of the native XML plugin, as described on [that comment I've made on issue #23](https://github.com/sonar-xsl/Sonar-XSL-Plugin/issues/23#issuecomment-923084791)
+
 ## Build from sources
 
 The Sonar-XSL-Plugin is built *via* Maven.
