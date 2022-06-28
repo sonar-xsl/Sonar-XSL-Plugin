@@ -21,7 +21,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sonar.apiVersion>6.7.1</sonar.apiVersion>
+		<sonar.apiVersion>7.4</sonar.apiVersion>
 	</properties>
 
 	<dependencies>
