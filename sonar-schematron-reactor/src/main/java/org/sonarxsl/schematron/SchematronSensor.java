@@ -13,14 +13,11 @@ import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.sensor.Sensor;
 import org.sonar.api.batch.sensor.SensorContext;
 import org.sonar.api.batch.sensor.SensorDescriptor;
-import org.sonar.api.batch.sensor.highlighting.NewHighlighting;
 import org.sonar.api.batch.sensor.issue.NewIssue;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
-import org.sonar.plugins.xml.checks.XmlFile;
-import org.sonar.plugins.xml.compat.CompatibleInputFile;
-import org.sonar.plugins.xml.highlighting.HighlightingData;
-import org.sonar.plugins.xml.highlighting.XMLHighlighting;
+import org.sonar.plugins.xml.XmlHighlighting;
+import org.sonarsource.analyzer.commons.xml.XmlFile;
 import org.sonarxsl.exception.SchematronProcessingException;
 import org.sonarxsl.helpers.SaxonHolder;
 import org.sonarxsl.helpers.XpathLocator;
@@ -99,8 +96,8 @@ public class SchematronSensor implements Sensor{
 				processReport(file,inputFileDocument,report,context);
 				
 				
-				XmlFile xmlPluginLikeFile = new XmlFile(new CompatibleInputFile(file), fs);
-				saveSyntaxHighlighting(context, new XMLHighlighting(xmlPluginLikeFile).getHighlightingData(), xmlPluginLikeFile.getInputFile().wrapped());
+				XmlFile xmlPluginLikeFile = XmlFile.create(file);
+				XmlHighlighting.highlight(context, xmlPluginLikeFile);
 				
 			} catch (SaxonApiException | IOException | SchematronProcessingException e) {
 				LOG.error(LOG_PREFIX + "An error occurend analysing file : " + file.uri(),e);
@@ -152,18 +149,7 @@ public class SchematronSensor implements Sensor{
 		return SaxonHolder.getInstance().buildDocument(source);	
 	}
 	
-	private static void saveSyntaxHighlighting(SensorContext context, List<HighlightingData> highlightingDataList, InputFile inputFile) {
-	    NewHighlighting highlighting = context.newHighlighting().onFile(inputFile);
-
-	    for (HighlightingData highlightingData : highlightingDataList) {
-	      highlightingData.highlight(highlighting);
-	    }
-	    try {
-	    	highlighting.save();
-	    } catch(Exception e) {
-	    	LOG.error(LOG_PREFIX + "Error reported during highlighting of file : " + inputFile.uri(), e);
-	    }
-	}
+	
 	
 	
 
